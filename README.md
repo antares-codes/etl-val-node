@@ -1,11 +1,21 @@
-# How to launch Etherlite validator node with Docker Compose and OpenEthereum
+# How to Create a Etherlite validator node on VULTR or DIGITAL OCEAN server with Ubuntu 20.04
 
-1. Install Docker Engine and Docker Compose following the original instructions https://docs.docker.com/get-docker/ and https://docs.docker.com/compose/install/
+1. Install Docker Engine and Docker Compose
+
+   ```bash
+    sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    sudo chmod +x /usr/local/bin/docker-compose
+    sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+    
+    curl https://get.docker.com | sh
+    sudo usermod -aG docker $USER
+    sudo reboot
+   ```
 
 2. Clone this repo:
 
    ```bash
-    git clone https://github.com/etherlite-org/validator-node-dockerized
+    git clone https://github.com/antares21scorpi/validator-node-dockerized
     cd validator-node-dockerized
    ```
 
