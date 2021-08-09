@@ -98,14 +98,21 @@ After docker containers are created, the node will sync with the chain (may take
 
 To restart you need to use `docker-compose stop` and `docker-compose start` being in the `validator-node-dockerized` directory.
 
-Security is important on this side too, so you must now secure your Server.
-Enter the following commands:
+12. Check if sync is completed.
+
+    ```bash
+    curl --data '{"method":"eth_syncing","params":[],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:8545
+    ```
+    
+This is what you're waiting to see: {"jsonrpc":"2.0","result":false,"id":1}
+
+### Security is important on this side too, so you must now secure your Server.
 
 Enter the following commands EXACTLY (in this order) to set up your firewall:
 
-Please note: Make sure you enter the code in this order! If you do not, the program will not work! You can disable your firewall anytime by entering (as root;)): ```bash ufw disable ```
+Please note: Make sure you enter the code in this order! If you do not, the program will not work! You can disable your firewall anytime by entering (as root;)): `ufw disable`
 
-12. Setup Firewall.
+13. Setup Firewall.
 
     ```bash
     sudo ufw allow ssh/tcp
@@ -115,3 +122,17 @@ Please note: Make sure you enter the code in this order! If you do not, the prog
     sudo ufw enable
     sudo ufw status
     ```
+
+(Optional) For more protection you can install [Fail2ban](https://linuxize.com/post/install-configure-fail2ban-on-ubuntu-20-04/) to avoid brute force attact.
+
+14. Create a crontab entry to monitor your node.
+
+    ```bash
+    crontab -e
+    
+    Add this line to the end of the file. save and exit.
+    
+    * * * * * $HOME/validator-node-dockerized/cron/watchdognode.sh > $HOME/validator-node-dockerized/cron/watchdognode.log 2>&1
+    ```
+
+## All done now! You are now a Validator Node Master...
