@@ -9,7 +9,7 @@ services:
       --chain=etherlite
       --nat="extip:$EXT_IP"
       --base-path=/root/validator-node-dockerized/data
-      --max-peers=50
+      --max-peers=100
       --unlock="$ACCOUNT"
       --password="$PASSWORD_PATH"
       --engine-signer="$ACCOUNT"
