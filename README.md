@@ -23,7 +23,7 @@ Recommended Server Size: 2 CPU with 2GB of RAM and 80+ GB SSD (will work on 1GB 
    sudo sysctl vm.vfs_cache_pressure=50
    ```
 
-1. Install Docker Engine and Docker Compose
+2. Install Docker Engine and Docker Compose
 
    ```bash
    sudo apt-get update
@@ -38,46 +38,46 @@ Recommended Server Size: 2 CPU with 2GB of RAM and 80+ GB SSD (will work on 1GB 
    sudo reboot
    ```
 
-2. Clone this repo:
+3. Clone this repo:
 
    ```bash
    git clone https://github.com/antares21scorpi/validator-node-dockerized
    cd validator-node-dockerized
    ```
 
-3. Download the OpenEthereum From EtherLite Releases.
+4. Download the OpenEthereum From EtherLite Releases.
 
    ```bash
    curl -L "https://github.com/etherlite-org/openethereum/releases/download/v3.2.2-rc.1/openethereum-ubuntu20.04.zip" -o openethereum.zip
    ```
 
-4. Install unzip to unzip the downloaded OpenEthereum zip.
+5. Install unzip to unzip the downloaded OpenEthereum zip.
 
    ```bash
    apt install -y unzip
    ```
 
-5. Unzip the OpenEthereum zip
+6. Unzip the OpenEthereum zip
    ```bash
    unzip openethereum.zip
    ```
-6. Create password file for mining account.
+7. Create password file for mining account.
    ```bash
    echo "YOUR-VAL-UNIQUE-PASS" > password
    ```
-7. Create your mining account
+8. Create your mining account
 
    ```bash
    ./openethereum account new --keys-path=data/keys --password=password --chain=etherlite
    ```
 
-8. Copy `.env.example` to `.env`
+9. Copy `.env.example` to `.env`
 
    ```bash
    cp .env.example .env
    ```
 
-9. Configure the `.env` file. There are a few settings you need to define:
+10. Configure the `.env` file. There are a few settings you need to define:
 
    ```
    PASSWORD_PATH=/root/password
@@ -88,12 +88,30 @@ Recommended Server Size: 2 CPU with 2GB of RAM and 80+ GB SSD (will work on 1GB 
    - `EXT_IP` - External IP of the current server.
    - `ACCOUNT` - Your mining address (with leading `0x`).
 
-10. Start your node.
+11. Start your node.
 
     ```bash
     docker-compose up -d
     ```
 
-After docker containers are created, the node will sync with the chain (may take a while).
+After docker containers are created, the node will sync with the chain (may take a while, 3+ hours).
 
 To restart you need to use `docker-compose stop` and `docker-compose start` being in the `validator-node-dockerized` directory.
+
+Security is important on this side too, so you must now secure your Server.
+Enter the following commands:
+
+Enter the following commands EXACTLY (in this order) to set up your firewall:
+
+Please note: Make sure you enter the code in this order! If you do not, the program will not work! You can disable your firewall anytime by entering (as root;)): ```bash ufw disable ```
+
+12. Setup Firewall.
+
+    ```bash
+    sudo ufw allow ssh/tcp
+    sudo ufw limit ssh/tcp
+    sudo ufw allow 8545/tcp
+    sudo ufw logging on
+    sudo ufw enable
+    sudo ufw status
+    ```
