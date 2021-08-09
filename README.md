@@ -133,6 +133,7 @@ Please note: Make sure you enter the code in this order! If you do not, the prog
 14. Create a crontab entry to monitor your node.
 
     ```bash
+    sudo chmod 755 /root/validator-node-dockerized/cron/watchdognode.sh
     crontab -e
     
     Add this line to the end of the file. save and exit.
