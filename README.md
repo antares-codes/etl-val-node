@@ -1,4 +1,27 @@
-# Create a EtherLite validator node on [VULTR](https://www.vultr.com/?ref=6881736) or [DIGITAL OCEAN](https://m.do.co/c/e2c65321d0d2) server with Ubuntu 20.04
+# Create an EtherLite validator node on [VULTR](https://www.vultr.com/?ref=6881736) or [DIGITAL OCEAN](https://m.do.co/c/e2c65321d0d2) server Ubuntu 20.04
+
+## BEFORE YOU BEGIN, YOU WILL NEED:
+100000 EtherLite (ETL)
+A command line program e.g. http://www.putty.org
+A [VULTR](https://www.vultr.com/?ref=6881736) or [DIGITAL OCEAN](https://m.do.co/c/e2c65321d0d2) server with Ubuntu 20.04
+An ability to follow instructions to the letter!!!
+Be aware, you are setting up a Validator Node on a remote server, and keeping your EtherLite Coins on a local MetaMask wallet. Your EtherLite Coins are never in danger from the remote server
+
+### You are now ready to configure your Server!
+
+Recommended Server Size: 2 CPU with 2GB of RAM and 80+ GB SSD (will work on 1GB of RAM with a SWAP file see below)
+
+If you have < 2GB of RAM on the system. We’ll have to set up a swapfile. If you have the required 2GB, feel free to skip to next step.
+
+   ```bash
+   sudo fallocate -l 2G /swapfile
+   sudo chmod 600 /swapfile
+   sudo mkswap /swapfile
+   sudo swapon /swapfile
+   echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+   sudo sysctl vm.swappiness=10
+   sudo sysctl vm.vfs_cache_pressure=50
+   ```
 
 1. Install Docker Engine and Docker Compose
 
