@@ -123,6 +123,8 @@ Please note: Make sure you enter the code in this order! If you do not, the prog
     sudo ufw allow ssh/tcp
     sudo ufw limit ssh/tcp
     sudo ufw allow 8545/tcp
+    sudo ufw allow 30303
+    sudo ufw allow 8546
     sudo ufw logging on
     sudo ufw enable
     sudo ufw status
