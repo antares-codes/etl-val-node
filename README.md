@@ -69,6 +69,8 @@ Recommended Server Size: 2 CPU with 2GB of RAM and 80+ GB SSD (will work on 1GB 
 
    ```bash
    ./openethereum account new --keys-path=data/keys --password=password --chain=etherlite
+   
+   Save the return address for stept 10
    ```
 
 9. Copy `.env.example` to `.env`
@@ -79,8 +81,11 @@ Recommended Server Size: 2 CPU with 2GB of RAM and 80+ GB SSD (will work on 1GB 
 
 10. Configure the `.env` file. There are a few settings you need to define:
 
-   ```
-   PASSWORD_PATH=/root/password
+   ```bash
+   nano .env
+   
+   Update Parameter below.
+   
    EXT_IP=YOUR-EXTERNAL-IP-ADDRESS
    ACCOUNT=0x...
    ```
