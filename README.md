@@ -1,6 +1,7 @@
 # Create an EtherLite validator node on [VULTR](https://www.vultr.com/?ref=6881736) or [DIGITAL OCEAN](https://m.do.co/c/e2c65321d0d2) server Ubuntu 20.04
 
 ## BEFORE YOU BEGIN, YOU WILL NEED:
+
 100000 EtherLite (ETL)
 A command line program e.g. http://www.putty.org
 A [VULTR](https://www.vultr.com/?ref=6881736) or [DIGITAL OCEAN](https://m.do.co/c/e2c65321d0d2) server with Ubuntu 20.04
@@ -11,7 +12,7 @@ Be aware, you are setting up a Validator Node on a remote server, and keeping yo
 
 Recommended Server Size: 2 CPU with 2GB of RAM and 80+ GB SSD (will work on 1GB of RAM with a SWAP file see below)
 
-If you have < 2GB of RAM on the system. We’ll have to set up a swapfile. If you have the required 2GB, feel free to skip to next step.
+1. If you have < 2GB of RAM on the system. We’ll have to set up a swapfile. If you have the required 2GB, feel free to skip to next step.
 
    ```bash
    sudo fallocate -l 2G /swapfile
