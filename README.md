@@ -88,9 +88,8 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
 
    ```bash
    ./openethereum account new --keys-path=data/keys --password=password --chain=etherlite
-   
-   Save the return address for stept 10
    ```
+   Save the return address for stept 10
 
 10. Copy `.env.example` to `.env`
 
