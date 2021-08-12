@@ -40,9 +40,9 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
 
 3. Clone this repo:
 
-Your clock should by synchronized to prevent skipping block sealing.
+   Your clock should by synchronized to prevent skipping block sealing.
 
-Enter `timedatectl status` , you should see similar output:
+   Enter `timedatectl status` , you should see similar output:
 
    ```bash
    Local time: Tue 2020-06-30 17:16:19 UTC
@@ -53,9 +53,9 @@ Enter `timedatectl status` , you should see similar output:
    systemd-timesyncd.service active: yes
    RTC in local TZ: no
    ```
-If System clock synchronized displays yes, you are ready to go, proceed to step 4.
+   If System clock synchronized displays yes, you are ready to go, proceed to step 4.
    
-If not, get help here: https://vitux.com/how-to-sync-system-time-with-internet-time-servers-on-ubuntu-20-04/
+   If not, get help here: https://vitux.com/how-to-sync-system-time-with-internet-time-servers-on-ubuntu-20-04/
    
 4. Clone this repo:
 
