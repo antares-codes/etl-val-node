@@ -40,32 +40,51 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
 
 3. Clone this repo:
 
+Your clock should by synchronized to prevent skipping block sealing.
+
+Enter `timedatectl status` , you should see similar output:
+
+   ```bash
+   Local time: Tue 2020-06-30 17:16:19 UTC
+   Universal time: Tue 2020-06-30 17:16:19 UTC
+   RTC time: Tue 2020-06-30 17:16:19
+   Time zone: Etc/UTC (UTC, +0000)
+   System clock synchronized: yes
+   systemd-timesyncd.service active: yes
+   RTC in local TZ: no
+   ```
+If System clock synchronized displays yes, you are ready to go, proceed to step 4.
+   
+If not, get help here: https://vitux.com/how-to-sync-system-time-with-internet-time-servers-on-ubuntu-20-04/
+   
+4. Clone this repo:
+
    ```bash
    git clone https://github.com/antares21scorpi/validator-node-dockerized
    cd validator-node-dockerized
    ```
 
-4. Download the OpenEthereum From EtherLite Releases.
+5. Download the OpenEthereum From EtherLite Releases.
 
    ```bash
    curl -L "https://github.com/etherlite-org/openethereum/releases/download/v3.2.2-rc.1/openethereum-ubuntu20.04.zip" -o openethereum.zip
    ```
 
-5. Install unzip to unzip the downloaded OpenEthereum zip.
+6. Install unzip to unzip the downloaded OpenEthereum zip.
 
    ```bash
    apt install -y unzip
    ```
 
-6. Unzip the OpenEthereum zip
+7. Unzip the OpenEthereum zip
    ```bash
    unzip openethereum.zip
    ```
-7. Create password file for mining account.
+8. Create password file for mining account.
    ```bash
    echo "YOUR-VAL-UNIQUE-PASS" > password
    ```
-8. Create your mining account
+9. Create your mining account
 
    ```bash
    ./openethereum account new --keys-path=data/keys --password=password --chain=etherlite
@@ -73,13 +92,13 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
    Save the return address for stept 10
    ```
 
-9. Copy `.env.example` to `.env`
+10. Copy `.env.example` to `.env`
 
    ```bash
    cp .env.example .env
    ```
 
-10. Configure the `.env` file. There are a few settings you need to define:
+11. Configure the `.env` file. There are a few settings you need to define:
 
    ```bash
    nano .env
@@ -93,7 +112,7 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
    - `EXT_IP` - External IP of the current server.
    - `ACCOUNT` - Your mining address (with leading `0x`).
 
-11. Start your node.
+12. Start your node.
 
     ```bash
     docker-compose up -d
@@ -103,7 +122,7 @@ After docker containers are created, the node will sync with the chain (may take
 
 To restart you need to use `docker-compose stop` and `docker-compose start` being in the `validator-node-dockerized` directory.
 
-12. Check if sync is completed.
+13. Check if sync is completed.
 
     ```bash
     curl --data '{"method":"eth_syncing","params":[],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:8545
@@ -117,7 +136,7 @@ Enter the following commands EXACTLY (in this order) to set up your firewall:
 
 Please note: Make sure you enter the code in this order! If you do not, the program will not work! You can disable your firewall anytime by entering (as root;)): `ufw disable`
 
-13. Setup Firewall.
+14. Setup Firewall.
 
     ```bash
     sudo ufw allow ssh/tcp
@@ -132,7 +151,7 @@ Please note: Make sure you enter the code in this order! If you do not, the prog
 
 (Optional) For more protection you can install [Fail2ban](https://linuxize.com/post/install-configure-fail2ban-on-ubuntu-20-04/) to avoid brute force attact.
 
-14. Create a crontab entry to monitor your node.
+14. Setup Monitoring with a crontab entry.
 
     ```bash
     sudo chmod 755 /root/validator-node-dockerized/cron/watchdognode.sh
