@@ -13,6 +13,14 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
 
 1. If you have < 2GB of RAM on the system. We’ll have to set up a swapfile. If you have the required 2GB, feel free to skip to next step.
 
+We can see if the system has any configured swap by typing:
+
+   ```bash
+   sudo swapon --show
+   ```
+ 
+If you don’t get back any output, this means your system does not have swap space, follow procedure below.
+
    ```bash
    sudo fallocate -l 2G /swapfile
    sudo chmod 600 /swapfile
