@@ -158,7 +158,7 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
 
      (Optional) For more protection you can install [Fail2ban](https://linuxize.com/post/install-configure-fail2ban-on-ubuntu-20-04/) to avoid brute force attact.
 
-14. Setup Monitoring with a crontab entry.
+15. Setup Monitoring with a crontab entry.
 
      ```bash
      sudo chmod 755 /root/validator-node-dockerized/cron/watchdognode.sh
@@ -169,7 +169,7 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
      * * * * * $HOME/validator-node-dockerized/cron/watchdognode.sh > $HOME/validator-node-dockerized/cron/watchdognode.log 2>&1
      ```
      
-15. Double check if your validator node is working after ReBooting before you submit it to https://staking.etherlite.org
+16. Double check if your validator node is working after ReBooting before you submit it to https://staking.etherlite.org
 
     ```bash
     sudo reboot
@@ -184,7 +184,7 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
     
     Again, This is what you're waiting to see: {"jsonrpc":"2.0","result":false,"id":1}
     
-    Next test if RPC communication is enabled with your server, type `http://YOUR-EXTERNAL-IP-ADDRES:8545` and any web browser.
+    Next test if RPC communication is enabled with your server, type `http://YOUR-EXTERNAL-IP-ADDRES:8545` in any web browser.
     
     This is the message you're waiting to see: Used HTTP Method is not allowed. POST or OPTIONS is required
 
