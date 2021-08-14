@@ -125,9 +125,9 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
     docker-compose up -d
     ```
 
-   After docker containers are created, the node will sync with the chain (may take a while, 3+ hours).
+    After docker containers are created, the node will sync with the chain (may take a while, 3+ hours).
 
-   To restart you need to use `docker-compose stop` and `docker-compose start` being in the `validator-node-dockerized` directory.
+    To restart you need to use `docker-compose stop` and `docker-compose start` being in the `validator-node-dockerized` directory.
 
 13. Check if sync is completed.
 
@@ -135,13 +135,13 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
     curl --data '{"method":"eth_syncing","params":[],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:8545
     ```
     
-   This is what you're waiting to see: {"jsonrpc":"2.0","result":false,"id":1}
+    This is what you're waiting to see: {"jsonrpc":"2.0","result":false,"id":1}
 
-   ### Security is important on this side too, so you must now secure your Server.
+    ### Security is important on this side too, so you must now secure your Server.
 
-   Enter the following commands EXACTLY (in this order) to set up your firewall:
+    Enter the following commands EXACTLY (in this order) to set up your firewall:
 
-   Please note: Make sure you enter the code in this order! If you do not, the program will not work! You can disable your firewall anytime by entering (as root;)): `ufw disable`
+    Please note: Make sure you enter the code in this order! If you do not, the program will not work! You can disable your firewall anytime by entering (as root;)): `ufw disable`
 
 14. Setup Firewall.
 
@@ -156,7 +156,7 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
     sudo ufw status
     ```
 
-   (Optional) For more protection you can install [Fail2ban](https://linuxize.com/post/install-configure-fail2ban-on-ubuntu-20-04/) to avoid brute force attact.
+    (Optional) For more protection you can install [Fail2ban](https://linuxize.com/post/install-configure-fail2ban-on-ubuntu-20-04/) to avoid brute force attact.
 
 14. Setup Monitoring with a crontab entry.
 
@@ -169,4 +169,4 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
     * * * * * $HOME/validator-node-dockerized/cron/watchdognode.sh > $HOME/validator-node-dockerized/cron/watchdognode.log 2>&1
     ```
 
-   ## All done now! You are now a Validator Node Master...
+    ## All done now! You are now a Validator Node Master...
