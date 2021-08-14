@@ -101,9 +101,9 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
 
 10. Copy `.env.example` to `.env`
 
-   ```bash
-   cp .env.example .env
-   ```
+    ```bash
+    cp .env.example .env
+    ```
 
 11. Update `.env` file. There are a few settings you need to define:
 
