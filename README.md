@@ -168,5 +168,24 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
     
      * * * * * $HOME/validator-node-dockerized/cron/watchdognode.sh > $HOME/validator-node-dockerized/cron/watchdognode.log 2>&1
      ```
+     
+15. Double check if your validator node is working after ReBooting before you submit it to https://staking.etherlite.org
 
-     ## All done now! You are now a Validator Node Master...
+    ```bash
+    sudo reboot
+    ```
+    
+    Wait 2 minutes before login back in your server.
+    
+    ```bash
+    cd validator-node-dockerized
+    curl --data '{"method":"eth_syncing","params":[],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:8545
+    ```
+    
+    Again, This is what you're waiting to see: {"jsonrpc":"2.0","result":false,"id":1}
+    
+    Next test if RPC communication is enabled with your server, type `http://YOUR-EXTERNAL-IP-ADDRES:8545` and any web browser.
+    
+    This is the message you're waiting to see: Used HTTP Method is not allowed. POST or OPTIONS is required
+
+    ## All done now! You are now a Validator Node Master...
