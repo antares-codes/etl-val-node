@@ -68,7 +68,7 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
 4. Clone this repo:
 
    ```bash
-   git clone https://github.com/antares21scorpi/validator-node-dockerized
+   git clone https://github.com/antares-etherlite/validator-node-dockerized
    cd validator-node-dockerized
    ```
 
