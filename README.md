@@ -5,6 +5,7 @@
 - A command line program e.g. http://www.putty.org
 - A [VULTR](https://www.vultr.com/?ref=6881736) or [DIGITAL OCEAN](https://m.do.co/c/e2c65321d0d2) server with Ubuntu 20.04
 - An ability to follow instructions to the letter!!!
+- Additional Support by Antares [Discord Channel](https://discord.gg/uHEVyRc6Zb)
 - Be aware, you are setting up a Validator Node on a remote server, and keeping your EtherLite Coins on a local MetaMask wallet. Your EtherLite Coins are never in danger from the remote server
 
 ### You are now ready to configure your Server!
@@ -189,3 +190,5 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
     This is the message you're waiting to see: Used HTTP Method is not allowed. POST or OPTIONS is required
 
     ## All done now! You are now a Validator Node Master...
+    
+    Join our [Discord Support Channel](https://discord.gg/uHEVyRc6Zb)
