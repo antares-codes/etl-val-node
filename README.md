@@ -170,7 +170,7 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
      * * * * * $HOME/validator-node-dockerized/cron/watchdognode.sh > $HOME/validator-node-dockerized/cron/watchdognode.log 2>&1
      ```
      
-     (Optional) Monitor all your nodes [Site24x7](https://www.site24x7.com) receive Server Down, Critical or Trouble SMS/eMail alerts.
+     (Optional) Monitor all your nodes with [Site24x7](https://www.site24x7.com). Receive Server Down, Critical or Trouble SMS/eMail alerts.
      
 16. Double check if your validator node is working after ReBooting before you submit it to https://staking.etherlite.org
 
