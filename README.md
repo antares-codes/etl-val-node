@@ -159,7 +159,7 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
 
      (Optional) For more protection you can install [Fail2ban](https://linuxize.com/post/install-configure-fail2ban-on-ubuntu-20-04/) to avoid brute force attact.
 
-15. Setup Monitoring with a crontab entry.
+15. Setup Monitoring with a crontab entry. (If your node go offline, it will restart automatically.)
 
      ```bash
      sudo chmod 755 /root/validator-node-dockerized/cron/watchdognode.sh
@@ -169,6 +169,8 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
     
      * * * * * $HOME/validator-node-dockerized/cron/watchdognode.sh > $HOME/validator-node-dockerized/cron/watchdognode.log 2>&1
      ```
+     
+     (Optional) Monitor all your nodes [Site24x7](https://www.site24x7.com) receive Server Down, Critical or Trouble SMS/eMail alerts.
      
 16. Double check if your validator node is working after ReBooting before you submit it to https://staking.etherlite.org
 
