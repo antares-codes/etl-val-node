@@ -194,3 +194,5 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
     ## All done now! You are now a Validator Node Master...
     
     Join our [Discord Support Channel](https://discord.gg/uHEVyRc6Zb)
+    
+    Manage Social, Meeting, Chat, CRM, Helpdesk, Mails, Apps, Files, Sales & Marketing with [ZOHO](https://go.zoho.com/Jfo)
