@@ -181,7 +181,6 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
     Wait 2 minutes before login back in your server.
     
     ```bash
-    cd validator-node-dockerized
     curl --data '{"method":"eth_syncing","params":[],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:8545
     ```
     
