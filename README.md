@@ -165,7 +165,7 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
      sudo chmod 755 /root/validator-node-dockerized/cron/watchdognode.sh
      crontab -e
     
-     Add this line to the end of the file. save and exit.
+     Add this line to the end of the file plus(+) a carriage return(blank line). save and exit.
     
      * * * * * $HOME/validator-node-dockerized/cron/watchdognode.sh > $HOME/validator-node-dockerized/cron/watchdognode.log 2>&1
      ```
@@ -190,6 +190,8 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
     Next test if RPC communication is enabled with your server, type `http://YOUR-EXTERNAL-IP-ADDRES:8545` in any web browser.
     
     This is the message you're waiting to see: Used HTTP Method is not allowed. POST or OPTIONS is required
+    
+    Now you are ready to got to https://staking.etherlite.org. Just click the Become a Candidate Button and fill up the form.
 
     ## All done now! You are now a Validator Node Master...
     
