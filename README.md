@@ -10,9 +10,9 @@
 
 ### You are now ready to configure your Server!
 
-Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of RAM and 25+GB SSD (will work on 1GB of RAM with a SWAP file see below) Note that you will have to Resize/Upgrade you Droplet/Server over time as the Blockchain will increase in size as well as the number of transactions per block.
+Recommended Server Size: 2 CPU Premium Intel/AMD or High Frequency with 2GB of RAM and 60+GB SSD (will work on 1GB of RAM with a SWAP file "NOT Recommended" see below) Note that you will have to Resize/Upgrade you Droplet/Server over time as the Blockchain will increase in size as well as the number of transactions per block.
 
-1. If you have < 2GB of RAM on the system. We’ll have to set up a swapfile. If you have the required 2GB, feel free to skip to next step.
+1. If you have < 2GB of RAM on the system "NOT Recommended". We’ll have to set up a swapfile. If you have the required 2GB, feel free to skip to next step.
 
    We can see if the system has any configured swap by typing:
 
