@@ -138,26 +138,25 @@ Recommended Server Size: 1 CPU Premium Intel/AMD or High Frequency with 2GB of R
     
      This is what you're waiting to see: {"jsonrpc":"2.0","result":false,"id":1}
 
-     ### Security is important on this side too, so you must now secure your Server.
+14. Security.
 
-     Enter the following commands EXACTLY (in this order) to set up your firewall:
+     There is no need to setup a UFW firewall (There are too many ports to allow for communication between nodes)
 
-     Please note: Make sure you enter the code in this order! If you do not, the program will not work! You can disable your firewall anytime by entering (as root;)): `ufw disable`
-
-14. Setup Firewall.
-
+     So make sure it is Offline. (There is nothing of value anyway, unless you are running other scripts with your EtherLite Node, Not recommended)
+     
      ```bash
-     sudo ufw allow ssh/tcp
-     sudo ufw limit ssh/tcp
-     sudo ufw allow 8545/tcp
-     sudo ufw allow 30303
-     sudo ufw allow 8546
-     sudo ufw logging on
-     sudo ufw enable
      sudo ufw status
      ```
+     
+     You should get "Status: inactive"
+     
+     If not type: 
+     
+     ```bash
+     sudo ufw disable
+     ```
 
-     (Optional) For more protection you can install [Fail2ban](https://linuxize.com/post/install-configure-fail2ban-on-ubuntu-20-04/) to avoid brute force attact.
+     (Optional) We recommend you to install [Fail2ban](https://linuxize.com/post/install-configure-fail2ban-on-ubuntu-20-04/) to avoid brute force attack.
 
 15. Setup Monitoring with a crontab entry. (If your node go offline, it will restart automatically.)
 
