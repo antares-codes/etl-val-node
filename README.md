@@ -1,5 +1,7 @@
 # Create an EtherLite validator node on [VULTR](https://www.vultr.com/?ref=6881736) or [DIGITAL OCEAN](https://m.do.co/c/e2c65321d0d2) server Ubuntu 20.04
 
+### Video Coming Soon on [YouTube EtherLite UnOfficial](https://www.youtube.com/c/EtherLite/videos)
+
 ## BEFORE YOU BEGIN, YOU WILL NEED:
 - 100000 EtherLite (ETL)
 - A command line program e.g. http://www.putty.org
