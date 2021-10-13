@@ -1,4 +1,4 @@
-# DO NOT USE THIS GUIDE - NEW GUIDE WILL BE AVAILABLE SOON
+# DO NOT USE THIS GUIDE - UNDER CONSTRUCTION
 
 # Create an EtherLite validator node on [VULTR](https://www.vultr.com/?ref=6881736) or [DIGITAL OCEAN](https://m.do.co/c/e2c65321d0d2) server Ubuntu 20.04
 
