@@ -84,13 +84,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD (Digital Ocean) or High Frequen
    ```
    Save the return address for stept 12
 
-11. ???????????????
-
-    ```bash
-    ???????????
-    ```
-
-12. Update `.env` file. There are a few settings you need to define:
+12. Update `node.toml` file. There are a few settings you need to define:
 
     ```bash
     nano node.toml
