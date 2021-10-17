@@ -52,7 +52,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD (Digital Ocean) or High Frequen
 4. Download the OpenEthereum From EtherLite Releases.
 
    ```bash
-   curl -L "https://github.com/openethereum/openethereum/releases/download/v3.2.2-rc.1/openethereum-linux-v3.2.2-rc.1.zip" -o openethereum.zip
+   curl -SfL "https://github.com/openethereum/openethereum/releases/download/v3.2.2-rc.1/openethereum-linux-v3.2.2-rc.1.zip" -o openethereum.zip
    ```
 
 5. Install unzip to unzip the downloaded OpenEthereum zip.
@@ -65,38 +65,45 @@ Recommended Server Size: 2 CPU Premium Intel/AMD (Digital Ocean) or High Frequen
    ```bash
    unzip openethereum.zip
    ```
-7. Create password file for mining account.
+7. Give proper permission to run the file
+   ```bash
+   chmod +x openethereum
+   ```
+8. Download the genesis file of EtherLite
+   ```bash
+   curl -SfL 'https://raw.githubusercontent.com/etherlite-org/openethereum/etherlite/crates/ethcore/res/chainspec/etherlite.json' -o genesis.json
+   ```
+9. Create password file for mining account.
    ```bash
    echo "YOUR-VAL-UNIQUE-PASS" > password
    ```
-8. Create your mining account
+10. Create your mining account
 
    ```bash
    ./openethereum account new --keys-path=data/keys --password=password --chain=etherlite
    ```
-   Save the return address for stept 11
+   Save the return address for stept 12
 
-9. Copy `.env.example` to `.env`
+11. ???????????????
 
     ```bash
-    cp .env.example .env
+    ???????????
     ```
 
-10. Update `.env` file. There are a few settings you need to define:
+12. Update `.env` file. There are a few settings you need to define:
 
     ```bash
-    nano .env
+    nano node.toml
    
     Update Parameter below.
    
-    EXT_IP=YOUR-EXTERNAL-IP-ADDRESS
-    ACCOUNT=0x...
+    unlock = [""]
+    engine_signer = ""
     ```
+    - Line 31 `unlock` - Your mining address (with leading `0x`).
+    - Line 33 `engine_signer` - Your mining address (with leading `0x`).
 
-    - `EXT_IP` - External IP of the current server.
-    - `ACCOUNT` - Your mining address (with leading `0x`).
-
-11. Start your node.
+13. Start your node.
 
      ```bash
      screen -S node
@@ -107,7 +114,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD (Digital Ocean) or High Frequen
 
      To safely minimize the screen by entering (CTRL+a+d)
 
-12. Check if sync is completed.
+14. Check if sync is completed.
 
      ```bash
      curl --data '{"method":"eth_syncing","params":[],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:8545
@@ -115,7 +122,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD (Digital Ocean) or High Frequen
     
      This is what you're waiting to see: {"jsonrpc":"2.0","result":false,"id":1}
      
-11. Stop your node.
+15. Stop your node.
      
      First you need to find your Screen ID
      
@@ -141,7 +148,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD (Digital Ocean) or High Frequen
      screen -r 5182.node
      ```
 
-13. Security.
+16. Security.
 
      There is no need to setup a UFW firewall (There are too many ports to allow for communication between nodes)
 
@@ -161,7 +168,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD (Digital Ocean) or High Frequen
 
      (Optional) We recommend you to install [Fail2ban](https://linuxize.com/post/install-configure-fail2ban-on-ubuntu-20-04/) to avoid brute force attack.
 
-14. Setup Monitoring with a crontab entry. (If your node go offline, it will restart automatically.)
+17. Setup Monitoring with a crontab entry. (If your node go offline, it will restart automatically.)
 
      ```bash
      sudo chmod 755 /root/validator-node-dockerized/cron/watchdognode.sh
@@ -174,7 +181,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD (Digital Ocean) or High Frequen
      
      (Optional) Monitor all your nodes with [Site24x7](https://www.site24x7.com). Receive Server Down, Critical or Trouble SMS/eMail alerts.
      
-15. Double check if your validator node is working after ReBooting before you submit it to https://staking.etherlite.org
+18. Double check if your validator node is working after ReBooting before you submit it to https://staking.etherlite.org
 
     ```bash
     sudo reboot
