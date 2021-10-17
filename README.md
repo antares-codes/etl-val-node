@@ -49,13 +49,13 @@ Recommended Server Size: 2 CPU Premium Intel/AMD (Digital Ocean) or High Frequen
    cd validator-node-screen
    ```
 
-4. Download the OpenEthereum From EtherLite Releases.
+4. Download OpenEthereum.
 
    ```bash
    curl -SfL "https://github.com/openethereum/openethereum/releases/download/v3.2.2-rc.1/openethereum-linux-v3.2.2-rc.1.zip" -o openethereum.zip
    ```
 
-5. Install unzip to unzip the downloaded OpenEthereum zip.
+5. Install unzip.
 
    ```bash
    apt install -y unzip
