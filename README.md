@@ -125,9 +125,9 @@ Recommended Server Size: 2 CPU Premium Intel/AMD (Digital Ocean) or High Frequen
 
      You will get back something like below.
      
-     _There is a screen on:
-             5182.node       (10/16/2021 03:02:40 PM)        (Detached)
-     1 Socket in /run/screen/S-root._
+     > There is a screen on:
+            5182.node       (10/16/2021 03:02:40 PM)        (Detached)
+     1 Socket in /run/screen/S-root.
 
      Your Screen ID is 5182.node.
      
