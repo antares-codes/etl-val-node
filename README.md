@@ -99,12 +99,13 @@ Recommended Server Size: 2 CPU Premium Intel/AMD (Digital Ocean) or High Frequen
 11. Start your node.
 
      ```bash
-     docker-compose up -d
+     screen -S node
+     ./openethereum --config=node.toml --jsonrpc-port=8545 --jsonrpc-cors=all --jsonrpc-interface=all --jsonrpc-hosts=all --jsonrpc-apis=web3,eth,net,parity --ws-interface=all --ws-apis=web3,eth,net,parity,pubsub --ws-origins=all --ws-hosts=all --ws-max-connections=10 --max-peers=100
      ```
 
-     After docker containers are created, the node will sync with the chain (may take a while, 3+ hours).
+     The node will sync with the chain (may take a while, 3+ hours).
 
-     To restart you need to use `docker-compose stop` and `docker-compose start` being in the `validator-node-dockerized` directory.
+     To safely minimize the screen by entering (CTRL+a+d)
 
 12. Check if sync is completed.
 
@@ -113,6 +114,32 @@ Recommended Server Size: 2 CPU Premium Intel/AMD (Digital Ocean) or High Frequen
      ```
     
      This is what you're waiting to see: {"jsonrpc":"2.0","result":false,"id":1}
+     
+11. Stop your node.
+     
+     First you need to find your Screen ID
+     
+     ```bash
+     screen -list
+     ```
+
+     You will get back something like below.
+     
+     _There is a screen on:
+             5182.node       (10/16/2021 03:02:40 PM)        (Detached)
+     1 Socket in /run/screen/S-root._
+
+     Your Screen ID is 5182.node.
+     
+      ```bash
+     screen -X -S "5182.node" quit
+     ```
+     
+     Or if you just want to get back to monitor your node.
+     
+      ```bash
+     screen -r 5182.node
+     ```
 
 13. Security.
 
