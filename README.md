@@ -45,8 +45,8 @@ Recommended Server Size: 2 CPU Premium Intel/AMD (Digital Ocean) or High Frequen
 3. Clone this repo:
 
    ```bash
-   git clone https://github.com/antares-etherlite/validator-node-dockerized
-   cd validator-node-dockerized
+   git clone https://github.com/antares-etherlite/validator-node-screen
+   cd validator-node-screen
    ```
 
 4. Download the OpenEthereum From EtherLite Releases.
