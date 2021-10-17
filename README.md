@@ -129,13 +129,13 @@ Recommended Server Size: 2 CPU Premium Intel/AMD (Digital Ocean) or High Frequen
             5182.node       (10/16/2021 03:02:40 PM)        (Detached)
      1 Socket in /run/screen/S-root.
 
-     Your Screen ID is 5182.node.
+     Your Screen ID is 5182.node. (replace 5182 with your ID)
      
       ```bash
      screen -X -S "5182.node" quit
      ```
      
-     Or if you just want to get back to monitor your node.
+     Or if you just want to get back to monitor your node. (replace 5182 with your ID)
      
       ```bash
      screen -r 5182.node
