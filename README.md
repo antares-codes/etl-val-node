@@ -14,7 +14,7 @@
 
 ### You are now ready to configure your Server!
 
-Recommended Server Size: 2 CPU Premium Intel/AMD (Digital Ocean) or High Frequency (VULTR) with 2GB of RAM and 60+GB SSD. Note that you will have to Resize/Upgrade you Droplet/Server over time as the Blockchain will increase in size as well as the number of transactions per block.
+Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.co/c/e2c65321d0d2)) or High Frequency ([VULTR](https://www.vultr.com/?ref=6881736)) with 2GB of RAM and 60+GB SSD. Note that you will have to Resize/Upgrade you Droplet/Server over time as the Blockchain will increase in size as well as the number of transactions per block.
 
 1. Update and Upgrade your server.
 
@@ -38,7 +38,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD (Digital Ocean) or High Frequen
    systemd-timesyncd.service active: yes
    RTC in local TZ: no
    ```
-   If System clock synchronized displays yes and Time zone is set to UTC, proceed to step 4.
+   If System clock synchronized displays yes and Time zone is set to UTC, proceed to step 3.
    
    If not, get help here: https://vitux.com/how-to-sync-system-time-with-internet-time-servers-on-ubuntu-20-04/
    
@@ -77,12 +77,12 @@ Recommended Server Size: 2 CPU Premium Intel/AMD (Digital Ocean) or High Frequen
    ```bash
    echo "YOUR-VAL-UNIQUE-PASS" > password
    ```
-10. Create your mining account
+10. Create your Validator account address
 
-   ```bash
-   ./openethereum account new --keys-path=data/keys --password=password --chain=etherlite
-   ```
-   Save the return address for stept 12
+    ```bash
+    ./openethereum account new --keys-path=data/keys --password=password --chain=etherlite
+    ```
+    Save the return address for next stept
 
 12. Update `node.toml` file. There are a few settings you need to define:
 
@@ -94,8 +94,8 @@ Recommended Server Size: 2 CPU Premium Intel/AMD (Digital Ocean) or High Frequen
     unlock = [""]
     engine_signer = ""
     ```
-    - Line 31 `unlock` - Your mining address (with leading `0x`).
-    - Line 33 `engine_signer` - Your mining address (with leading `0x`).
+    - Line 31 `unlock` - Your account address (with leading `0x`).
+    - Line 33 `engine_signer` - Your account address (with leading `0x`).
 
 13. Start your node.
 
