@@ -127,7 +127,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
     
      This is what you're waiting to see: {"jsonrpc":"2.0","result":false,"id":1}
      
-15. Stop your node.
+15. (OPTIONAL SCREEN COMMAND) If you need to Stop your node.
      
      First you need to find your Screen ID
      
