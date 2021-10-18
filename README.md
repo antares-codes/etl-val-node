@@ -114,9 +114,9 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
      ./openethereum --config=node.toml --jsonrpc-port=8545 --jsonrpc-cors=all --jsonrpc-interface=all --jsonrpc-hosts=all --jsonrpc-apis=web3,eth,net,parity --ws-interface=all --ws-apis=web3,eth,net,parity,pubsub --ws-origins=all --ws-hosts=all --ws-max-connections=10 --max-peers=100
      ```
 
-     The node will sync with the chain (may take a while, 3+ hours).
+     The node will sync with the chain (may take a while, Many hours).
 
-     To safely minimize the screen by entering (CTRL+a+d)
+     To safely minimize Screen by entering (CTRL+a+d)
 
 14. Check if sync is completed.
 
