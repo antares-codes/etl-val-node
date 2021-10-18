@@ -99,7 +99,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
 
 13. (OPTIONAL) Download a Blockchain snapshot for faster initial sync.
      
-     Since synchronizing the blockchain can take many hours at this point, I decided to make a snapshot (around block height 3,500,000+) so you can synchronize faster when setting up a new node - your node will only have to sync blocks made after that point.
+     Since synchronizing the blockchain can take many hours at this point, I decided to make a snapshot (around block height 3,747,100) so you can synchronize faster when setting up a new node - your node will only have to sync blocks made after that point.
      
      ```bash
      curl -L "https://mega.nz/file/s0wVkI7Y#8kcyQLRjR4xJTgnZjOb2BfSeQWivki-MYjcZwJebrWA" -o chains.zip
