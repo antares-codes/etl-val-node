@@ -73,7 +73,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
    ```bash
    curl -SfL 'https://raw.githubusercontent.com/etherlite-org/openethereum/etherlite/crates/ethcore/res/chainspec/etherlite.json' -o genesis.json
    ```
-9. Create password file for mining account.
+9. Create password file for Validator account.
    ```bash
    echo "YOUR-VAL-UNIQUE-PASS" > password
    ```
