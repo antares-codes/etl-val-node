@@ -105,7 +105,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
      curl -L "https://mega.nz/file/s0wVkI7Y#8kcyQLRjR4xJTgnZjOb2BfSeQWivki-MYjcZwJebrWA" -o chains.zip
      ```
      
-     NOTE: This file is 1.6 GB, download time may differ depending on server performance and connection.
+     NOTE: This file is 1.6 GB, download time may differ depending on your server performance and connection. The snapshot file is located on my personal MEGA paying account for better download performance speed.
 
 13. Start your node.
 
