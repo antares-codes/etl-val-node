@@ -104,7 +104,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
      Since synchronizing the blockchain can take many hours at this point, I decided to make a snapshot (around block height 3,748,000) so you can synchronize faster when setting up a new node - your node will only have to sync blocks made after that point.
      
      ```bash
-     curl -L "https://mega.nz/file/t4BjBAJQ#ODf1Zkwz-mxZfvKPBdhqyA4DZtbiSp4dLZIw1T8O_UA" -o chains.zip
+     curl -L "https://etherlite.ams3.digitaloceanspaces.com/chains3748.zip" -o chains.zip
      unzip chains.zip
      ```
      
