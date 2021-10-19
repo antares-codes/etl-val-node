@@ -175,7 +175,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
 
      (Optional) We recommend you to install [Fail2ban](https://linuxize.com/post/install-configure-fail2ban-on-ubuntu-20-04/) to avoid brute force attack.
 
-17. Setup Monitoring with a crontab entry. (If your node go offline, it will restart automatically.)
+17. Setup Monitoring with a crontab entry. If your node go offline, it will restart automatically. (NOTE: FOR crontab -e "select NANO 1")
 
      ```bash
      sudo chmod 755 /root/validator-node-screen/cron/watchdognode.sh
@@ -185,6 +185,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
     
      * * * * * $HOME/validator-node-screen/cron/watchdognode.sh > $HOME/validator-node-screen/cron/watchdognode.log 2>&1
      ```
+     After Adding the cron line Press CTRL+X you will be asked if you want to save. Enter Y and Press Enter.
      
      (Optional) Monitor all your nodes with [Site24x7](https://www.site24x7.com). Receive Server Down, Critical or Trouble SMS/eMail alerts.
      
