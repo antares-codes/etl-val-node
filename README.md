@@ -178,7 +178,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
 17. Setup Monitoring with a crontab entry. (If your node go offline, it will restart automatically.)
 
      ```bash
-     sudo chmod 755 /root/validator-node-dockerized/cron/watchdognode.sh
+     sudo chmod 755 /root/validator-node-screen/cron/watchdognode.sh
      crontab -e
     
      Add this line to the end of the file plus(+) a carriage return(blank line). save and exit.
