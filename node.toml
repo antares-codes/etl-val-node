@@ -27,7 +27,7 @@ cors = ["*"]
 [websockets]
 port = 8546
 [account]
-password = ["/root/validator-node-dockerized/password"]
+password = ["/root/validator-node-screen/password"]
 unlock = [""]
 [mining]
 engine_signer = ""
