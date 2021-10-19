@@ -101,7 +101,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
 
 13. (OPTIONAL) Download a Blockchain snapshot for faster initial sync.
      
-     Since synchronizing the blockchain can take many hours at this point, I decided to make a snapshot (around block height 3,748,000) so you can synchronize faster when setting up a new node - your node will only have to sync blocks made after that point.
+     Since synchronizing the blockchain can take many hours at this point, I decided to make a snapshot (around block height 3,748,000) so you can synchronize faster when setting up a new node - your node will only have to sync blocks made after that point. Make sure you are still in ~/validator-node-screen# directory before unziping.
      
      ```bash
      curl -L "https://etherlite.ams3.digitaloceanspaces.com/chains3748.zip" -o chains.zip
