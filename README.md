@@ -80,7 +80,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
 10. Create your Validator account address
 
     ```bash
-    ./openethereum account new --keys-path=data/keys --password=password --chain=etherlite
+    ./openethereum account new --keys-path=data/keys --password=password --chain=genesis.json
     ```
     Save the return address for next stept
 
