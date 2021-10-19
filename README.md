@@ -108,7 +108,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
      unzip chains.zip
      ```
      
-     NOTE: This file is 1.6 GB, download time may differ depending on your server performance and connection. The snapshot file is located on my personal MEGA paying account for better download performance speed.
+     NOTE: This file is 1.6 GB, download time may differ depending on your server performance and connection (usually under 30 seconds) this will save you 3+ hours of sync. The snapshot file is located on my personal high-speed space Digital Ocean paying account for better download performance speed.
 
 13. Start your node.
 
