@@ -183,7 +183,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
     
      Add this line to the end of the file plus(+) a carriage return(blank line). save and exit.
     
-     * * * * * $HOME/validator-node-dockerized/cron/watchdognode.sh > $HOME/validator-node-dockerized/cron/watchdognode.log 2>&1
+     * * * * * $HOME/validator-node-screen/cron/watchdognode.sh > $HOME/validator-node-screen/cron/watchdognode.log 2>&1
      ```
      
      (Optional) Monitor all your nodes with [Site24x7](https://www.site24x7.com). Receive Server Down, Critical or Trouble SMS/eMail alerts.
