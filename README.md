@@ -86,7 +86,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
     
     PLAN B: Newby not familiar with an FTP program.
 
-    From your old server, this could be located in cd /opt/validator-node-dockerized/data/keys/etl or cd /root/validator-node-dockerized/data/keys/etl or cd /root/validator-node-dockerized/data/keys/etl depending on your initial setup.
+    From your old server, this could be located in cd /opt/validator-node-dockerized/data/keys/etl or cd /root/validator-node-dockerized/data/keys/etl or cd /root/validator-node-screen/data/keys/etl depending on your initial setup.
     
     Just copy the long file name that look like "UTC--2021-08-18T11-05-28Z--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" and save in notepad for future use.
     
