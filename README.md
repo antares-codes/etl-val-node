@@ -1,4 +1,4 @@
-# Transfer your EtherLite validator node to [VULTR](https://www.vultr.com/?ref=6881736) or [DIGITAL OCEAN](https://m.do.co/c/e2c65321d0d2) or any root access server supporting Ubuntu 20.04
+# Transfer your active EtherLite validator node to [VULTR](https://www.vultr.com/?ref=6881736) or [DIGITAL OCEAN](https://m.do.co/c/e2c65321d0d2) or any root access server supporting Ubuntu 20.04
 
 ## BEFORE YOU BEGIN, YOU WILL NEED:
 - An already active and running EtherLite Validator node.
