@@ -216,8 +216,6 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
     Next test if RPC communication is enabled with your server, type `http://YOUR-EXTERNAL-IP-ADDRES:8545` in any web browser.
     
     This is the message you're waiting to see: Used HTTP Method is not allowed. POST or OPTIONS is required
-    
-    Now you are ready to got to https://staking.etherlite.org. Just click the Become a Candidate Button and fill up the form.
 
     ## All done now! Before you delete your old server, make sure your new node is validating block on the explorer: https://explorer.etherlite.org/
     
