@@ -1,12 +1,10 @@
-# DO NOT USE THIS GUIDE - UNDER CONSTRUCTION
-
 # Transfer your EtherLite validator node to [VULTR](https://www.vultr.com/?ref=6881736) or [DIGITAL OCEAN](https://m.do.co/c/e2c65321d0d2) or any root access server supporting Ubuntu 20.04
 
 ## BEFORE YOU BEGIN, YOU WILL NEED:
 - An already active and running EtherLite Validator node.
 - A command line program e.g. http://www.putty.org
 - A [VULTR](https://www.vultr.com/?ref=6881736) or [DIGITAL OCEAN](https://m.do.co/c/e2c65321d0d2) or any root access server supporting Ubuntu 20.04
-- An ability to follow instructions to the letter!!!
+- An ability to follow instructions to the letter! If you run 2 nodes with same address you will get in trouble.
 - Additional Support by Antares [Discord Channel](https://discord.gg/uHEVyRc6Zb) and/or [Telegram Channel](https://t.me/etherlite_stakvaldev)
 - Be aware, you are setting up a Validator Node on a remote server, and keeping your EtherLite Coins on a local MetaMask wallet. Your EtherLite Coins are never in danger from the remote server
 
@@ -122,7 +120,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
      
      NOTE: This file is 1.6 GB, download time may differ depending on your server performance and connection (usually under 30 seconds) this will save you 3+ hours of sync. The snapshot file is located on my personal high-speed space Digital Ocean paying account for better download performance speed.
 
-13. Start your node.
+13. Start your node. (Before you do that make sure your old validator node is not running. - Use command `docker-compose stop` or `screen -X -S "SCREEN-ID" quit`)
 
      ```bash
      screen -S node
@@ -201,7 +199,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
      
      (Optional) Monitor all your nodes with [Site24x7](https://www.site24x7.com). Receive Server Down, Critical or Trouble SMS/eMail alerts.
      
-18. Double check if your validator node is working after ReBooting before you submit it to https://staking.etherlite.org
+18. Double check if your validator node is working after ReBooting.
 
     ```bash
     sudo reboot
@@ -221,7 +219,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
     
     Now you are ready to got to https://staking.etherlite.org. Just click the Become a Candidate Button and fill up the form.
 
-    ## All done now! You are now a Validator Node Master...
+    ## All done now! Before you delete your old server, make sure your new node is validating block on the explorer: https://explorer.etherlite.org/
     
     Join our [Discord Support Channel](https://discord.gg/uHEVyRc6Zb) and/or [Telegram Channel](https://t.me/etherlite_stakvaldev)
     
