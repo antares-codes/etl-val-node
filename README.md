@@ -96,13 +96,19 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
     cat UTC--2021-08-18T11-05-28Z--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     ```
     You will get something like this:
-{"id":"XXXXXXXXXXXXXXXXXXXXXXXX","version":3,"crypto":{"cipher":"aes-128-ctr","cipherparams":{"iv":"34a77fbXXXXXXXXXXXXXXXXXX665ff"},"ciphertext":"719560d3aa8487a7a61XXXXXXXXXXXXXXXXXXXXXXXXXXXXX0edc4e5267feae65","kdf":"pbkdf2","kdfparams":{"c":10240,"dklen":32,"prf":"hmac-sha256","salt":"9fe1e0712c544XXXXXXXXXXXXXXXXXXXXXXXXXXX53a7b99f4b5ca"},"mac":"b0c617b6c06XXXXXXXXXXXXXXXXXXXXXXXXXXX3182ae282954e1825bb2bf7"},"address":"a6d721XXXXXXXXXXXXXXXXXXXXXXX89ec","name":"","meta":"{}"}
+{"id":"XXXXXXXXXXXXXXXXXXXXXXXX","version":3,"crypto":{"cipher":"aes-128-ctr","cipherparams":{"iv":"34a77fbXXXXXXXXXXXXXXXXXX665ff"},"ciphertext":"719560d3aa8487a7a61XXXXXXXXXXXXXXXXXXXXXXXXXXXXX0edc4e5267feae65","kdf":"pbkdf2","kdfparams":{"c":10240,"dklen":32,"prf":"hmac-sha256","salt":"9fe1e0712c544XXXXXXXXXXXXXXXXXXXXXXXXXXX53a7b99f4b5ca"},"mac":"b0c617b6c06XXXXXXXXXXXXXXXXXXXXXXXXXXX3182ae282954e1825bb2bf7"},"address":"a6d721XXXXXXXXXXXXXXXXX XXXXXX89ec","name":"","meta":"{}"}
 
-Just copy all from the opening to the closing bracket.
+    Just copy all from the opening to the closing bracket.
     
-    To the new server
+    Going back to the new server. (change UTC key file name with your below)
+    
     ```bash
-    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    cd /root/validator-node-dockerized/data/keys/etl
+    nano UTC--2021-08-18T11-05-28Z--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    
+    Add the data we got previously like below but all should fit in one line with no space or carriage return. save and exit.
+    
+    {"id":"XXXXXXXXXXXXXXXXXXXXXXXX","version":3,"crypto":{"cipher":"aes-128-ctr","cipherparams":{"iv":"34a77fbXXXXXXXXXXXXXXXXXX665ff"},"ciphertext":"719560d3aa8487a7a61XXXXXXXXXXXXXXXXXXXXXXXXXXXXX0edc4e5267feae65","kdf":"pbkdf2","kdfparams":{"c":10240,"dklen":32,"prf":"hmac-sha256","salt":"9fe1e0712c544XXXXXXXXXXXXXXXXXXXXXXXXXXX53a7b99f4b5ca"},"mac":"b0c617b6c06XXXXXXXXXXXXXXXXXXXXXXXXXXX3182ae282954e1825bb2bf7"},"address":"a6d721XXXXXXXXXXXXXXXXX XXXXXX89ec","name":"","meta":"{}"}
     ```
     Save the return address for next stept
 
