@@ -69,7 +69,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
    ```bash
    curl -SfL 'https://raw.githubusercontent.com/etherlite-org/openethereum/etherlite/crates/ethcore/res/chainspec/etherlite.json' -o genesis.json
    ```
-9. Retreive your password from the old server with command `cat password` and Create password file for Validator account on the new server.
+9. Retreive your password from the old server with command `cat password` and Create password file for Validator account on the new server. Make sure your are in password directory.
    ```bash
    echo "YOUR-PASS-FROM-OLD-SERVER" > password
    ```
@@ -107,7 +107,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
     - Line 31 `unlock` - Your account address (with leading `0x`).
     - Line 33 `engine_signer` - Your account address (with leading `0x`).
 
-    After Adding the your validator address Press CTRL+X you will be asked if you want to save. Enter Y and Press Enter.
+    After Adding your validator address Press CTRL+X you will be asked if you want to save. Enter Y and Press Enter.
 
 13. (RECOMMENDED BUT OPTIONAL) Download a Blockchain snapshot for faster initial sync. Save 3+ hours of sync.
      
