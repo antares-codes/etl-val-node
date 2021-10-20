@@ -80,13 +80,25 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
     ```
     Save the returning address starting with 0x for stept 12
     
-11. Transfer your Validator account address
+11. Transfer your Validator account address key to your new server
 
-    From your old server
+    PLAN A: For advance user to open any FTP program download your key from old server /data/keys/etl to new server /data/keys/etl.
+    
+    PLAN B: Newby not familiar with an FTP program.
+
+    From your old server, this could be located in /opt/validator-node-dockerized/data/keys/etl or /root/validator-node-dockerized/data/keys/etl or /root/validator-node-dockerized/data/keys/etl
+    
+    Just copy the long file name that look like "UTC--2021-08-18T11-05-28Z--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" and save in notepad for future use.
+    
+    Now retreive the data inside the file (change UTC key file name with your below)
+    
     ```bash
-    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    cat UTC--2021-08-18T11-05-28Z--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     ```
-    Save the return address for next stept
+    You will get something like this:
+{"id":"XXXXXXXXXXXXXXXXXXXXXXXX","version":3,"crypto":{"cipher":"aes-128-ctr","cipherparams":{"iv":"34a77fbXXXXXXXXXXXXXXXXXX665ff"},"ciphertext":"719560d3aa8487a7a61XXXXXXXXXXXXXXXXXXXXXXXXXXXXX0edc4e5267feae65","kdf":"pbkdf2","kdfparams":{"c":10240,"dklen":32,"prf":"hmac-sha256","salt":"9fe1e0712c544XXXXXXXXXXXXXXXXXXXXXXXXXXX53a7b99f4b5ca"},"mac":"b0c617b6c06XXXXXXXXXXXXXXXXXXXXXXXXXXX3182ae282954e1825bb2bf7"},"address":"a6d721XXXXXXXXXXXXXXXXXXXXXXX89ec","name":"","meta":"{}"}
+
+Just copy all from the opening to the closing bracket.
     
     To the new server
     ```bash
