@@ -238,12 +238,12 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
 
     ## All done now! Before you delete your old server, make sure your new node is validating blocks on the explorer: https://explorer.etherlite.org/
     
-    Also double check that step 11 of transfering your key was done corectly.
+    Also double check that step 11 of transferring your key was done correctly.
 
     ```bash
     curl --data '{"method":"eth_accounts","params":[],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:8545
     ```
-    If you got back your validator node address key like on your old server than your good to go.
+    If you got back your validator node address key like on your old server, then your good to go.
     
     Join our [Discord Support Channel](https://discord.gg/uHEVyRc6Zb) and/or [Telegram Channel](https://t.me/etherlite_stakvaldev)
     
