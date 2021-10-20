@@ -139,7 +139,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
      
      NOTE: This file is 1.6 GB, download time may differ depending on your server performance and connection (usually under 30 seconds) this will save you 3+ hours of sync. The snapshot file is located on my personal high-speed space Digital Ocean paying account for better download performance speed.
 
-13. Start your node. (Before you do that make sure your old validator node is not running. - Use command `docker-compose stop` or `screen -X -S "SCREEN-ID" quit`)
+14. Start your node. (Before you do that make sure your old validator node is not running. - Use command `docker-compose stop` or `screen -X -S "SCREEN-ID" quit`)
 
      ```bash
      screen -S node
@@ -150,7 +150,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
 
      To safely minimize Screen by entering (CTRL+a+d)
 
-14. Check if sync is completed.
+15. Check if sync is completed.
 
      ```bash
      curl --data '{"method":"eth_syncing","params":[],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:8545
@@ -158,7 +158,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
     
      This is what you're waiting to see: {"jsonrpc":"2.0","result":false,"id":1}
      
-15. (OPTIONAL SCREEN COMMAND) If you need to Stop your node.
+16. (OPTIONAL SCREEN COMMAND) If you need to Stop your node.
      
      First you need to find your Screen ID
      
@@ -184,7 +184,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
      screen -r 5182.node
      ```
 
-16. Security.
+17. Security.
 
      There is no need to setup a UFW firewall (There are too many ports to allow for communication between nodes)
 
@@ -204,7 +204,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
 
      (Optional) We recommend you to install [Fail2ban](https://linuxize.com/post/install-configure-fail2ban-on-ubuntu-20-04/) to avoid brute force attack.
 
-17. Setup Monitoring with a crontab entry. If your node go offline, it will restart automatically. (NOTE: FOR crontab -e "select NANO 1")
+18. Setup Monitoring with a crontab entry. If your node go offline, it will restart automatically. (NOTE: FOR crontab -e "select NANO 1")
 
      ```bash
      sudo chmod 755 /root/validator-node-screen/cron/watchdognode.sh
@@ -218,7 +218,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
      
      (Optional) Monitor all your nodes with [Site24x7](https://www.site24x7.com). Receive Server Down, Critical or Trouble SMS/eMail alerts.
      
-18. Double check if your validator node is working after ReBooting.
+19. Double check if your validator node is working after ReBooting.
 
     ```bash
     sudo reboot
@@ -236,7 +236,14 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
     
     This is the message you're waiting to see: Used HTTP Method is not allowed. POST or OPTIONS is required
 
-    ## All done now! Before you delete your old server, make sure your new node is validating block on the explorer: https://explorer.etherlite.org/
+    ## All done now! Before you delete your old server, make sure your new node is validating blocks on the explorer: https://explorer.etherlite.org/
+    
+    Also double check that step 11 of transfering your key was done corectly.
+
+    ```bash
+    curl --data '{"method":"eth_accounts","params":[],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:8545
+    ```
+    If you got back your validator node address key like on your old server than your good to go.
     
     Join our [Discord Support Channel](https://discord.gg/uHEVyRc6Zb) and/or [Telegram Channel](https://t.me/etherlite_stakvaldev)
     
