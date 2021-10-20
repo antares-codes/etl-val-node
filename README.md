@@ -99,7 +99,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
 
     After Adding the your validator address Press CTRL+X you will be asked if you want to save. Enter Y and Press Enter.
 
-13. (OPTIONAL) Download a Blockchain snapshot for faster initial sync.
+13. (RECOMMENDED BUT OPTIONAL) Download a Blockchain snapshot for faster initial sync. Save 3+ hours of sync.
      
      Since synchronizing the blockchain can take many hours at this point, I decided to make a snapshot (around block height 3,748,000) so you can synchronize faster when setting up a new node - your node will only have to sync blocks made after that point. Make sure you are still in ~/validator-node-screen# directory before unziping.
      
