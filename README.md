@@ -1,18 +1,16 @@
 # DO NOT USE THIS GUIDE - UNDER CONSTRUCTION
 
-# Create an EtherLite validator node on [VULTR](https://www.vultr.com/?ref=6881736) or [DIGITAL OCEAN](https://m.do.co/c/e2c65321d0d2) server Ubuntu 20.04
-
-### Watch full video procedure on [New YouTube Tutorial coming soon](https://youtu.be/)
+# Transfer your EtherLite validator node to [VULTR](https://www.vultr.com/?ref=6881736) or [DIGITAL OCEAN](https://m.do.co/c/e2c65321d0d2) or any root access server supporting Ubuntu 20.04
 
 ## BEFORE YOU BEGIN, YOU WILL NEED:
-- 100000 EtherLite (ETL)
+- An already active and running EtherLite Validator node.
 - A command line program e.g. http://www.putty.org
-- A [VULTR](https://www.vultr.com/?ref=6881736) or [DIGITAL OCEAN](https://m.do.co/c/e2c65321d0d2) server with Ubuntu 20.04
+- A [VULTR](https://www.vultr.com/?ref=6881736) or [DIGITAL OCEAN](https://m.do.co/c/e2c65321d0d2) or any root access server supporting Ubuntu 20.04
 - An ability to follow instructions to the letter!!!
 - Additional Support by Antares [Discord Channel](https://discord.gg/uHEVyRc6Zb) and/or [Telegram Channel](https://t.me/etherlite_stakvaldev)
 - Be aware, you are setting up a Validator Node on a remote server, and keeping your EtherLite Coins on a local MetaMask wallet. Your EtherLite Coins are never in danger from the remote server
 
-### You are now ready to configure your Server!
+### You are now ready to configure your new Server!
 
 Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.co/c/e2c65321d0d2)) or High Frequency ([VULTR](https://www.vultr.com/?ref=6881736)) with 2GB of RAM and 60+GB SSD. Note that you will have to Resize/Upgrade you Droplet/Server over time as the Blockchain will increase in size as well as the number of transactions per block.
 
@@ -73,14 +71,28 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
    ```bash
    curl -SfL 'https://raw.githubusercontent.com/etherlite-org/openethereum/etherlite/crates/ethcore/res/chainspec/etherlite.json' -o genesis.json
    ```
-9. Create password file for Validator account.
+9. Retreive your password from the old server with command `cat password` and Create password file for Validator account on the new server.
    ```bash
-   echo "YOUR-VAL-UNIQUE-PASS" > password
+   echo "YOUR-PASS-FROM-OLD-SERVER" > password
    ```
-10. Create your Validator account address
+10. Retreive your Validator account address from the old server
 
     ```bash
-    ./openethereum account new --keys-path=data/keys --password=password --chain=genesis.json
+    curl --data '{"method":"eth_accounts","params":[],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:8545
+    ```
+    Save the returning address starting with 0x for stept 12
+    
+11. Transfer your Validator account address
+
+    From your old server
+    ```bash
+    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    ```
+    Save the return address for next stept
+    
+    To the new server
+    ```bash
+    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     ```
     Save the return address for next stept
 
