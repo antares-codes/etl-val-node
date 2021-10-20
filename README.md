@@ -80,13 +80,13 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
     ```
     Save the returning address starting with 0x for stept 12
     
-11. Transfer your Validator account address key to your new server
+11. Transfer your Validator account address key to your new server (This is a tricky part, If you are not sure here contact Antares for support)
 
     PLAN A: For advance user to open any FTP program download your key from old server /data/keys/etl to new server /data/keys/etl.
     
     PLAN B: Newby not familiar with an FTP program.
 
-    From your old server, this could be located in /opt/validator-node-dockerized/data/keys/etl or /root/validator-node-dockerized/data/keys/etl or /root/validator-node-dockerized/data/keys/etl
+    From your old server, this could be located in cd /opt/validator-node-dockerized/data/keys/etl or cd /root/validator-node-dockerized/data/keys/etl or cd /root/validator-node-dockerized/data/keys/etl depending on your initial setup.
     
     Just copy the long file name that look like "UTC--2021-08-18T11-05-28Z--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" and save in notepad for future use.
     
@@ -110,11 +110,12 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
     
     {"id":"XXXXXXXXXXXXXXXXXXXXXXXX","version":3,"crypto":{"cipher":"aes-128-ctr","cipherparams":{"iv":"34a77fbXXXXXXXXXXXXXXXXXX665ff"},"ciphertext":"719560d3aa8487a7a61XXXXXXXXXXXXXXXXXXXXXXXXXXXXX0edc4e5267feae65","kdf":"pbkdf2","kdfparams":{"c":10240,"dklen":32,"prf":"hmac-sha256","salt":"9fe1e0712c544XXXXXXXXXXXXXXXXXXXXXXXXXXX53a7b99f4b5ca"},"mac":"b0c617b6c06XXXXXXXXXXXXXXXXXXXXXXXXXXX3182ae282954e1825bb2bf7"},"address":"a6d721XXXXXXXXXXXXXXXXX XXXXXX89ec","name":"","meta":"{}"}
     ```
-    Save the return address for next stept
+    After Adding the data Press CTRL+X you will be asked if you want to save. Enter Y and Press Enter.
 
 12. Update `node.toml` file. There are a few settings you need to define:
 
     ```bash
+    cd /root/validator-node-dockerized/
     nano node.toml
    
     Update Parameter below.
