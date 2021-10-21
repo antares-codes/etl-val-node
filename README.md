@@ -82,7 +82,7 @@ Recommended Server Size: 2 CPU Premium Intel/AMD ([DIGITAL OCEAN](https://m.do.c
     
 11. Transfer your Validator account address key to your new server (This is a tricky part, If you are not sure here contact Antares for support)
 
-    PLAN A: For advance user to open any FTP program download your key from old server /data/keys/etl to new server /data/keys/etl.
+    PLAN A: For advance user to open any FTP program download your key from old server /data/keys/etl and upload to your new server /data/keys/etl.
     
     PLAN B: Newby not familiar with an FTP program.
 
