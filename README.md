@@ -2,7 +2,7 @@
 
 ## BEFORE YOU BEGIN, YOU WILL NEED:
 - An already active and running EtherLite Validator node.
-- A command line program e.g. http://www.putty.org
+- A command line program e.g. http://www.putty.org for OSX https://www.ssh.com/academy/ssh/putty/mac
 - A [VULTR](https://www.vultr.com/?ref=6881736) or [DIGITAL OCEAN](https://m.do.co/c/e2c65321d0d2) or any root access server supporting Ubuntu 20.04
 - An ability to follow instructions to the letter! If you run 2 nodes with same address you will get in trouble.
 - Additional Support by Antares [Discord Channel](https://discord.gg/uHEVyRc6Zb) and/or [Telegram Channel](https://t.me/antarescodes)
