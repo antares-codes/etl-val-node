@@ -2,6 +2,7 @@
 # install.sh
 # git clone https://github.com/antares-etherlite/etl-val-node
 # cd etl-val-node
+# chmod +x install.sh
 
 sudo apt-get update && sudo apt-get -y upgrade
 
@@ -88,9 +89,7 @@ sudo ufw logging on
 sudo ufw default allow outgoing
 sudo ufw --force enable
 
-crontab -l | { cat; echo "* * * * * $HOME/validator-node-screen/cron/watchdognode.sh > $HOME/validator-node-screen/cron/watchdognode.log 2>&1"; } | crontab -
-sudo apt-get clean
-sudo apt-get autoremove
+crontab -l | { cat; echo "@reboot $HOME/validator-node-screen/cron/watchdognode.sh > $HOME/validator-node-screen/cron/watchdognode.log 2>&1"; } | crontab -
 
 echo "Chain downloading..."
 curl -L "https://fast.antarescodes.space/chains5798.zip" -o chains.zip
