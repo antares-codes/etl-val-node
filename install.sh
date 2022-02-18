@@ -1,8 +1,9 @@
 #!/bin/bash
-# install.sh
+# passwd
 # git clone https://github.com/antares-etherlite/etl-val-node
 # cd etl-val-node
 # chmod +x install.sh
+# install.sh
 
 sudo apt-get update && sudo apt-get -y upgrade
 
