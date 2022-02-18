@@ -77,9 +77,8 @@ echo '$_PUB_KEY,$_rpcPassword
 cd
 
 sudo apt install fail2ban
-
+cd ~/root/etl-val-node
 cp jail.local /etc/fail2ban
-
 sudo systemctl restart fail2ban
 
 sudo ufw allow 30300
