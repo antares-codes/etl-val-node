@@ -8,7 +8,7 @@
 sudo apt-get update && sudo apt-get -y upgrade
 
 echo "Make swap..."
-sudo fallocate -l 1G /swapfile
+sudo fallocate -l 2G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
@@ -16,7 +16,7 @@ echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 sudo sysctl vm.swappiness=10
 sudo sysctl vm.vfs_cache_pressure=50
 
-cd etl-val-node
+cd ~/root/etl-val-node
 
 curl -SfL "https://github.com/openethereum/openethereum/releases/download/v3.2.2-rc.1/openethereum-linux-v3.2.2-rc.1.zip" -o openethereum.zip
 
@@ -60,9 +60,9 @@ cors = ["*"]
 port = 8546
 [account]
 password = ["/root/etl-val-node/password"]
-unlock = ["${_PUB_KEY}"]
+unlock = ["$_PUB_KEY"]
 [mining]
-engine_signer = "${_PUB_KEY}"
+engine_signer = "$_PUB_KEY"
 reseal_on_txs = "none"
 force_sealing = true
 ' > node.toml
@@ -70,8 +70,8 @@ cd
 
 _MON_IP=$(hostname -I)
 
-echo '${_PUB_KEY},${_rpcPassword}
-' > ${_MON_IP}.csv
+echo '$_PUB_KEY,$_rpcPassword
+' > $_MON_IP.csv
 cd
 
 sudo apt install fail2ban
@@ -91,6 +91,8 @@ sudo ufw default allow outgoing
 sudo ufw --force enable
 
 crontab -l | { cat; echo "@reboot $HOME/validator-node-screen/cron/watchdognode.sh > $HOME/validator-node-screen/cron/watchdognode.log 2>&1"; } | crontab -
+
+cd ~/root/etl-val-node
 
 echo "Chain downloading..."
 curl -L "https://fast.antarescodes.space/chains5798.zip" -o chains.zip
