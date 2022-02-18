@@ -1,3 +1,35 @@
+#
+# WARNING: heavily refactored in 0.9.0 release.  Please review and
+#          customize settings for your setup.
+#
+# Changes:  in most of the cases you should not modify this
+#           file, but provide customizations in jail.local file,
+#           or separate .conf files under jail.d/ directory, e.g.:
+#
+# HOW TO ACTIVATE JAILS:
+#
+# YOU SHOULD NOT MODIFY THIS FILE.
+#
+# It will probably be overwritten or improved in a distribution update.
+#
+# Provide customizations in a jail.local file or a jail.d/customisation.local.
+# For example to change the default bantime for all jails and to enable the
+# ssh-iptables jail the following (uncommented) would appear in the .local file.
+# See man 5 jail.conf for details.
+#
+# [DEFAULT]
+# bantime = 1h
+#
+# [sshd]
+# enabled = true
+#
+# See jail.conf(5) man page for more information
+
+
+
+# Comments: use '#' for comment lines and ';' (following a space) for inline comments
+
+
 [INCLUDES]
 
 #before = paths-distro.conf
@@ -57,15 +89,13 @@ before = paths-debian.conf
 # "ignoreip" can be a list of IP addresses, CIDR masks or DNS hosts. Fail2ban
 # will not ban a host which matches an address in this list. Several addresses
 # can be defined using space (and/or comma) separator.
-ignoreip = 127.0.0.1/8 ::1
+#ignoreip = 127.0.0.1/8 ::1
 
 # External command that will take an tagged arguments to ignore, e.g. <ip>,
 # and return true if the IP is to be ignored. False otherwise.
 #
 # ignorecommand = /path/to/command <ip>
 ignorecommand =
-
-ignoreip = 127.0.0.1/8 212.58.119.94 82.208.14.110 82.208.14.111 82.208.14.112 82.208.14.113 82.208.14.114 82.208.14.115 82.208.14.116 82.208.14.117 82.208.14.118 82.208.14.119
 
 # "bantime" is the number of seconds that a host is banned.
 bantime  = 4w
@@ -125,7 +155,7 @@ logencoding = auto
 #
 # true:  jail will be enabled and log files will get monitored for changes
 # false: jail is not enabled
-enabled = true
+enabled = false
 
 
 # "mode" defines the mode of the filter (see corresponding filter implementation for more info).
