@@ -90,7 +90,7 @@ sudo ufw logging on
 sudo ufw default allow outgoing
 sudo ufw --force enable
 
-crontab -l | { cat; echo "@reboot $HOME/validator-node-screen/cron/watchdognode.sh > $HOME/validator-node-screen/cron/watchdognode.log 2>&1"; } | crontab -
+crontab -l | { cat; echo "@reboot $HOME/etl-val-node/cron/watchdognode.sh > $HOME/etl-val-node/cron/watchdognode.log 2>&1"; } | crontab -
 
 cd ~/root/etl-val-node
 
