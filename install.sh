@@ -5,6 +5,7 @@
 
 sudo apt-get update && sudo apt-get -y upgrade
 
+echo "Make swap..."
 sudo fallocate -l 1G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
@@ -31,7 +32,7 @@ echo '#### File node.toml
 
 [parity]
 chain = "genesis.json"
-base_path = "/root/validator-node-screen/data"
+base_path = "/root/etl-val-node/data"
 
 [network]
 port = 30300
@@ -56,7 +57,7 @@ cors = ["*"]
 [websockets]
 port = 8546
 [account]
-password = ["/root/validator-node-screen/password"]
+password = ["/root/etl-val-node/password"]
 unlock = ["${_PUB_KEY}"]
 [mining]
 engine_signer = "${_PUB_KEY}"
@@ -91,11 +92,14 @@ crontab -l | { cat; echo "* * * * * $HOME/validator-node-screen/cron/watchdognod
 sudo apt-get clean
 sudo apt-get autoremove
 
+echo "Chain downloading..."
 curl -L "https://fast.antarescodes.space/chains5798.zip" -o chains.zip
+echo "Chain Unzip..."
 unzip chains.zip
 
 sleep 5
 
+echo "Start Node..."
 screen -m -d -S node ./openethereum --config=node.toml --jsonrpc-port=8545 --jsonrpc-cors=all --jsonrpc-interface=all --jsonrpc-hosts=all --jsonrpc-apis=web3,eth,net,parity --ws-interface=all --ws-apis=web3,eth,net,parity,pubsub --ws-origins=all --ws-hosts=all --ws-max-connections=5 --max-peers=30
 
 # Reboot the server
