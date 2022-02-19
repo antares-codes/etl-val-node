@@ -76,7 +76,7 @@ echo '$_PUB_KEY,$_rpcPassword
 ' > $_MON_IP.csv
 cd
 
-sudo apt install fail2ban
+sudo apt install -y fail2ban
 cd ~/root/etl-val-node
 cp jail.local /etc/fail2ban
 sudo systemctl restart fail2ban
